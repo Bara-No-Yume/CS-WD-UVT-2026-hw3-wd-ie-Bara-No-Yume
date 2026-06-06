@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Dumitru's Dev Space | Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .lab-note {
+      border-left: 4px solid #22c55e;
+      padding-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-layout">
+      <div>
+        <p class="site-title">Daniel Dumitru's Dev Space</p>
+        <p class="site-tagline">Small projects and CS notes.</p>
+      </div>
+      <p class="header-badge">Student Portfolio</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="data.html">Project Log</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="card.html">Card</a></li>
+        <li><a href="contact.html">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container page-content">
+    <h1>Junior Developer Project Showcase</h1>
+
+    <section class="hero-section hero-with-image">
+      <div>
+        <h2>What this site is about</h2>
+        <p>
+          This website is a small showcase of the projects and ideas I am working on while learning
+          programming, web design, and computer science basics. It is not meant to look like a huge
+          professional portfolio yet. It is more like a clean starting point that shows what I am practicing.
+        </p>
+        <p>
+          The main goal was to build the pages with clear HTML structure, readable content, accessible
+          navigation, and one shared CSS file for the main design.
+        </p>
+        <a class="button-link" href="projects.html">View the projects</a>
+      </div>
+      <figure class="hero-avatar">
+        <img src="assets/profile-placeholder.png" alt="Me">
+        <figcaption>Me</figcaption>
+      </figure>
+    </section>
+
+
+
+    <section class="feature-spotlight" aria-labelledby="portfolio-feature-title">
+      <div>
+        <p class="card-label">Portfolio update</p>
+        <h2 id="portfolio-feature-title">New portfolio builder</h2>
+        <p>
+          The final update adds a small interactive portfolio page where projects can be entered,
+          checked with JavaScript, and then displayed in an accessible table. It is still a course
+          project, but it finally behaves a bit more like an actual web feature.
+        </p>
+      </div>
+      <div class="spotlight-actions" aria-label="Portfolio quick links">
+        <a class="button-link" href="portfolio.html">Open portfolio form</a>
+        <a class="button-link secondary-button" href="cv.html">View CV page</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured work</h2>
+      <div class="card-grid">
+        <article class="card">
+          <p class="card-label">Web</p>
+          <h3>Portfolio Website</h3>
+          <p>A simple personal site where I practice page structure, navigation, and visual hierarchy.</p>
+        </article>
+        <article class="card">
+          <p class="card-label">Student Life</p>
+          <h3>Study Planner Mockup</h3>
+          <p>A small layout idea for keeping track of university tasks, deadlines, and study sessions.</p>
+        </article>
+        <article class="card">
+          <p class="card-label">Programming</p>
+          <h3>Algorithm Notes</h3>
+          <p>A notes page idea for sorting algorithms, comparisons, and the parts I usually need to revise.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>What I am practicing</h2>
+      <ul class="highlight-list lab-note" style="max-width: 75ch;">
+        <li>Using semantic HTML elements such as header, nav, main, section, article, and footer.</li>
+        <li>Writing CSS for spacing, typography, colors, cards, forms, and tables.</li>
+        <li>Checking the pages with validators before publishing them on GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Personal Skills</h2>
+      <p>
+        This table comes from the earlier lab work. It groups my current skills by area instead of pretending I have a legendary skill tree already unlocked.
+      </p>
+      <div class="table-wrapper skills-table-wrapper">
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th scope="col" colspan="3">Personal Skills</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="3">Programming</th>
+              <td>Python</td>
+              <td>JavaScript</td>
+            </tr>
+            <tr>
+              <td>C/C++</td>
+              <td>HTML/CSS</td>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="4">Design</th>
+              <td colspan="2" class="skill-good">Figma</td>
+            </tr>
+            <tr>
+              <td colspan="2">Canva</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="skill-weak">Photoshop</td>
+            </tr>
+            <tr>
+              <td colspan="2">UI/UX</td>
+            </tr>
+            <tr>
+              <th scope="row">Other</th>
+              <td colspan="2">Git</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Portfolio Table</h2>
+      <p>
+        This table keeps the project ideas in one place and adds some mixed content inside cells, because apparently tables needed side quests too.
+      </p>
+      <div class="table-wrapper portfolio-table-wrapper">
+        <table class="portfolio-table">
+          <caption>Personal projects portfolio overview</caption>
+          <thead>
+            <tr>
+              <th scope="col">Project Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Technologies</th>
+              <th scope="col">Difficulty</th>
+              <th scope="col">Link</th>
+              <th scope="col">ETC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Developer Showcase</th>
+              <td>Main course website with semantic pages and shared styling.</td>
+              <td>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </td>
+              <td>
+                <label class="visually-hidden" for="difficulty-showcase">Difficulty for Developer Showcase</label>
+                <select id="difficulty-showcase" name="difficulty-showcase">
+                  <option>Low</option>
+                  <option selected>Medium</option>
+                  <option>High</option>
+                </select>
+              </td>
+              <td><a href="projects.html">View details</a></td>
+              <td>Core original version/previous version site</td>
+            </tr>
+            <tr>
+              <th scope="row">Study Planner Mockup</th>
+              <td>Layout idea for study sessions and deadlines.</td>
+              <td>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS Grid</li>
+                  <li>Forms</li>
+                </ul>
+              </td>
+              <td>
+                <label class="visually-hidden" for="difficulty-planner">Difficulty for Study Planner Mockup</label>
+                <select id="difficulty-planner" name="difficulty-planner">
+                  <option>Low</option>
+                  <option selected>Medium</option>
+                  <option>High</option>
+                </select>
+              </td>
+              <td><a href="overview.html">View overview</a></td>
+              <td>Planned extension</td>
+            </tr>
+            <tr>
+              <th scope="row">Algorithm Notes Page</th>
+              <td>Short notes for algorithms and revision.</td>
+              <td>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Python notes</li>
+                </ul>
+              </td>
+              <td>
+                <label class="visually-hidden" for="difficulty-algorithms">Difficulty for Algorithm Notes Page</label>
+                <select id="difficulty-algorithms" name="difficulty-algorithms">
+                  <option>Low</option>
+                  <option selected>Medium</option>
+                  <option>High</option>
+                </select>
+              </td>
+              <td><a href="data.html">View project log</a></td>
+              <td>Useful for revision</td>
+            </tr>
+            <tr>
+              <th scope="row">Chatbot Helper</th>
+              <td>Small JavaScript page that answers project-related questions.</td>
+              <td>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </td>
+              <td>
+                <label class="visually-hidden" for="difficulty-chatbot">Difficulty for Chatbot Helper</label>
+                <select id="difficulty-chatbot" name="difficulty-chatbot">
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option selected>High</option>
+                </select>
+              </td>
+              <td><a href="chatbot.html">Try chatbot</a></td>
+              <td>Interactive previous version page</td>
+            </tr>
+            <tr>
+              <td colspan="6">Note: some links point to pages inside this course site because the projects are still practice versions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Daniel Dumitru's Dev Space. Built with HTML, CSS, and a bit of JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

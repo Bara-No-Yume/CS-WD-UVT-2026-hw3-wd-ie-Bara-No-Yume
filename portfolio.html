@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Dumitru's Dev Space | Portfolio Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-layout">
+      <div>
+        <p class="site-title">Daniel Dumitru's Dev Space</p>
+        <p class="site-tagline">Small projects and CS notes.</p>
+      </div>
+      <p class="header-badge">Student Portfolio</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="data.html">Project Log</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="card.html">Card</a></li>
+        <li><a href="contact.html">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container page-content">
+    <h1>Interactive Portfolio Builder</h1>
+
+    <section class="portfolio-hero" aria-labelledby="portfolio-intro-title">
+      <div>
+        <p class="card-label">Portfolio feature</p>
+        <h2 id="portfolio-intro-title">Add a project to the table</h2>
+        <p>
+          This page is the final portfolio feature. The form checks the input with JavaScript,
+          shows accessible error messages, and adds valid projects to the table below without reloading the page.
+        </p>
+      </div>
+      <div class="project-counter" aria-live="polite">
+        <span id="project-count">0</span>
+        <span>projects added this session</span>
+      </div>
+    </section>
+
+    <section class="portfolio-layout" aria-label="Project form and project table">
+      <form id="project-form" class="project-form" novalidate aria-describedby="form-status">
+        <fieldset>
+          <legend>Project details</legend>
+
+          <div class="form-group">
+            <label for="project-name">Project name</label>
+            <p id="project-name-help" class="form-help">Use a short and clear title.</p>
+            <input type="text" id="project-name" name="project-name" autocomplete="off" aria-describedby="project-name-help project-name-error" required>
+            <p id="project-name-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="project-description">Description</label>
+            <p id="project-description-help" class="form-help">Write at least 20 characters so the table has useful information.</p>
+            <textarea id="project-description" name="project-description" rows="5" aria-describedby="project-description-help project-description-error" required></textarea>
+            <p id="project-description-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="project-url">Project URL</label>
+              <input type="url" id="project-url" name="project-url" placeholder="https://example.com" aria-describedby="project-url-error" required>
+              <p id="project-url-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="project-tech">Main technology</label>
+              <select id="project-tech" name="project-tech" aria-describedby="project-tech-error" required>
+                <option value="">Choose one</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>C/C++</option>
+                <option>Mixed practice</option>
+              </select>
+              <p id="project-tech-error" class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="project-image">Thumbnail URL <span class="optional-text">optional</span></label>
+              <p id="project-image-help" class="form-help">Leave it empty to use the local placeholder image.</p>
+              <input type="url" id="project-image" name="project-image" placeholder="https://example.com/image.png" aria-describedby="project-image-help project-image-error">
+              <p id="project-image-error" class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="project-date">Completion date</label>
+              <input type="date" id="project-date" name="project-date" aria-describedby="project-date-error" required>
+              <p id="project-date-error" class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <div id="form-status" class="form-status" aria-live="polite"></div>
+
+        <div class="form-actions">
+          <button type="submit">Add project</button>
+          <button type="reset" class="secondary-button">Reset form</button>
+        </div>
+      </form>
+
+      <section class="portfolio-results" aria-labelledby="submitted-projects-title">
+        <h2 id="submitted-projects-title">Submitted projects</h2>
+        <p>
+          Valid projects are added here. The table uses a caption, scoped headers, and a responsive wrapper.
+        </p>
+        <div class="table-wrapper responsive-project-table">
+          <table id="projects-table">
+            <caption>Projects submitted through the portfolio form</caption>
+            <thead>
+              <tr>
+                <th scope="col">Project name</th>
+                <th scope="col">Description</th>
+                <th scope="col">URL</th>
+                <th scope="col">Technologies</th>
+                <th scope="col">Image thumbnail</th>
+                <th scope="col">Completion date</th>
+              </tr>
+            </thead>
+            <tbody id="projects-table-body">
+              <tr class="empty-row">
+                <td colspan="6">No projects added yet. Add one with the form above.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Daniel Dumitru's Dev Space. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

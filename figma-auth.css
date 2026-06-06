@@ -1,0 +1,28 @@
+/* Figma authentication UI exported styles / design tokens */
+
+:root {
+  /* Main Color Tokens */
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+
+  --background: #f8f9fa;
+  --foreground: #1a1d2e;
+
+  --muted-foreground: #6b7280;
+
+  /* Form Elements */
+  --border: #e5e7eb;
+  --input-background: #ffffff;
+  --ring: #6366f1;
+
+  /* Left Panel Gradient */
+  --navy-dark: #1a1d2e;
+  --purple-gradient-start: #4c1d95;
+  --purple-gradient-end: #5b21b6;
+
+  /* Spacing & Typography */
+  --font-size: 16px;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 0.5rem;
+}

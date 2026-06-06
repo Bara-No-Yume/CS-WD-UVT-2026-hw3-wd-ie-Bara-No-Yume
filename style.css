@@ -1,0 +1,111 @@
+/* Additional stylesheet: specificity title + styled skills/portfolio tables */
+
+h1 {
+  color: #f5f3ff;
+  font-style: normal;
+  padding: 10px;
+}
+
+.hero-with-image {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-avatar {
+  margin: 0;
+  text-align: center;
+}
+
+.hero-avatar img {
+  width: min(180px, 60vw);
+  height: auto;
+  border: 3px solid rgba(139, 92, 246, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+}
+
+.hero-avatar figcaption {
+  margin-top: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.skills-table {
+  overflow: hidden;
+  border-radius: 0.85rem;
+}
+
+.skills-table thead th {
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: #4c1d95;
+}
+
+.skills-table tbody th {
+  color: #ffffff;
+  background: #6d28d9;
+}
+
+.skills-table tbody tr:nth-child(odd) td {
+  color: #1f2937;
+  background: #ffffff;
+}
+
+.skills-table tbody tr:nth-child(even) td {
+  color: #1f2937;
+  background: #ede9fe;
+}
+
+.skills-table td,
+.skills-table th {
+  border: 1px solid #c4b5fd;
+}
+
+.skills-table .skill-good {
+  background: #dcfce7;
+}
+
+.skills-table .skill-weak {
+  background: #fee2e2;
+}
+
+.skills-table tbody tr:hover td,
+.skills-table tbody tr:hover th {
+  filter: brightness(1.08);
+}
+
+.portfolio-table ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.portfolio-table select {
+  min-width: 8rem;
+}
+
+.portfolio-table tbody tr:last-child td {
+  color: #d1fae5;
+  font-weight: 700;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 720px) {
+  .hero-with-image {
+    grid-template-columns: minmax(0, 1.5fr) minmax(180px, 0.5fr);
+  }
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Dumitru's Dev Space | Feedback</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-layout">
+      <div>
+        <p class="site-title">Daniel Dumitru's Dev Space</p>
+        <p class="site-tagline">Small projects and CS notes.</p>
+      </div>
+      <p class="header-badge">Student Portfolio</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="data.html">Project Log</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="card.html">Card</a></li>
+        <li><a href="contact.html" aria-current="page">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container page-content">
+    <h1>Contact and Feedback</h1>
+
+    <section>
+      <h2>Send feedback</h2>
+      <p>
+        This form is a mock feedback form for the project, so it does not send real messages.
+      </p>
+
+      <form action="#" method="post" class="contact-form" aria-label="Feedback form">
+        <fieldset>
+          <legend>Your details</legend>
+
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone <span class="optional-text">optional</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your message</legend>
+
+          <div class="form-group">
+            <label for="topic">Subject or topic</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose a topic</option>
+              <option value="portfolio">Portfolio website</option>
+              <option value="projects">Project ideas</option>
+              <option value="accessibility">Accessibility feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <p id="message-help" class="form-help">
+              Write a short message about the design, the project idea, or something that could be improved.
+            </p>
+            <textarea id="message" name="message" rows="6" aria-describedby="message-help" required></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>What kind of feedback are you sending?</legend>
+
+          <div class="radio-group">
+            <input type="radio" id="general-feedback" name="feedback-type" value="general" checked required>
+            <label for="general-feedback">General feedback</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="improvement" name="feedback-type" value="improvement">
+            <label for="improvement">Improvement suggestion</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="project-question" name="feedback-type" value="question">
+            <label for="project-question">Question about the project</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Submit feedback</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Messages Received</h2>
+      <p>
+        This sample table recreates the sample idea of tracking received messages. The data is fictional and used only for markup practice.
+      </p>
+      <div class="table-wrapper">
+        <table class="messages-table">
+          <caption>Messages received through the feedback page</caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Message</th>
+              <th scope="col">Date</th>
+              <th scope="col">Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <th scope="row" rowspan="2">Alex Ionescu</th>
+              <td rowspan="2"><a href="mailto:alex.ionescu@example.com">alex.ionescu@example.com</a></td>
+              <td>The portfolio page is clear and easy to follow.</td>
+              <td>2026-03-18</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>The project cards could use a little more spacing.</td>
+              <td>2026-03-19</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <th scope="row">Maria Popescu</th>
+              <td><a href="mailto:maria.popescu@example.com">maria.popescu@example.com</a></td>
+              <td>The form labels make the page easier to use.</td>
+              <td>2026-03-20</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <th scope="row">Radu Marin</th>
+              <td><a href="mailto:radu.marin@example.com">radu.marin@example.com</a></td>
+              <td>The chatbot page should mention what questions it understands.</td>
+              <td>2026-03-21</td>
+              <td>High</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Daniel Dumitru's Dev Space. Built with HTML, CSS, and a bit of JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

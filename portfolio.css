@@ -1,0 +1,154 @@
+/* Portfolio form and dynamic table styles */
+.portfolio-hero,
+.project-form,
+.portfolio-results,
+.cv-hero,
+.cv-panel,
+.feature-spotlight {
+  background: linear-gradient(180deg, var(--color-surface-light), var(--color-surface));
+  border: 1px solid var(--color-border);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.portfolio-hero,
+.feature-spotlight {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.35rem;
+}
+
+.project-counter {
+  display: grid;
+  place-items: center;
+  min-height: 9rem;
+  padding: 1rem;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(34, 197, 94, 0.18), rgba(139, 92, 246, 0.12));
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: 1rem;
+}
+
+.project-counter span:first-child {
+  display: block;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.portfolio-layout {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-form,
+.portfolio-results,
+.cv-panel,
+.cv-hero {
+  padding: 1.25rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.field-error {
+  min-height: 1.4rem;
+  margin: 0.35rem 0 0;
+  color: #fecaca;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.form-status {
+  min-height: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d1fae5;
+  font-weight: 700;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.18);
+}
+
+.form-actions,
+.spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.secondary-button {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+  background: rgba(139, 92, 246, 0.18);
+}
+
+.project-thumb {
+  width: 88px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  border-radius: 0.6rem;
+}
+
+.added-row {
+  animation: gentle-pop 320ms ease-out;
+}
+
+@keyframes gentle-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cv-hero {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cv-hero img {
+  width: min(170px, 55vw);
+  border: 3px solid rgba(34, 197, 94, 0.5);
+  border-radius: 50%;
+}
+
+.cv-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 720px) {
+  .portfolio-hero,
+  .feature-spotlight,
+  .cv-hero {
+    grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.8fr);
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

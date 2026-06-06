@@ -1,0 +1,19 @@
+CSS Specificity Game answers
+
+Paragraph A:
+It only matches the element selector p. It receives gray color, 1rem font size, Georgia serif font, line-height 1.4, and padding 4px 0 from the p rule.
+
+Paragraph B:
+It matches p and .info. The .info class is more specific than the p element selector, so color becomes steelblue, font-size becomes 1.25rem, font-family becomes Arial sans-serif, background becomes #e8f4fd, padding becomes 8px 14px, and border-left becomes 5px solid steelblue. It still keeps line-height 1.4 from p because .info does not replace that property.
+
+Paragraph C:
+It matches p and #warning. The id selector #warning is more specific than p, so it receives darkred color, 0.8rem font size, italic style, uppercase text, letter spacing 0.15em, dashed darkred border, padding 10px, #fff0f0 background, and Courier New monospace font. It keeps line-height 1.4 from p.
+
+Paragraph D:
+It matches p, .info, #warning, and #warning.info. For color, the browser uses darkorange from #warning.info because that selector contains an id plus a class, so it is more specific than p, .info, or #warning alone. For font-family, #warning wins with Courier New because #warning.info does not define font-family. Since #warning is more specific than .info, the font-family from #warning overrides the Arial font from .info.
+
+External, internal, and inline/internal explanation:
+The external style.css file defines h1 with a color, font-style, and padding: 10px. Then specificity.html adds an internal h1 rule inside the style tag that changes the h1 color to darkgreen. The internal rule wins for color because it appears later in the cascade and has the same selector specificity as the external h1 rule. The h1 still keeps the padding and font-style from the external stylesheet because the internal rule only changes color.
+
+Note:
+The lab-provided specificity code uses the same id value warning on two paragraphs. That is useful for the specificity exercise, but a validator may complain about duplicate ids. I kept the code this way because the lab instructions said to copy the exercise code exactly.
